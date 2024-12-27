@@ -1,4 +1,3 @@
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../model/user_model.dart';
@@ -30,7 +29,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       ));
     });
 
-
     on<LoginSubmitted>((event, emit) async {
       // Ensure the email and password are valid before proceeding
       if (!state.isValid) {
@@ -61,7 +59,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         } else {
           // Success: User authenticated
           emit(state.copyWith(isSubmitting: false, navigateToHome: true));
-
         }
       } catch (error) {
         // Handle unexpected errors
@@ -72,16 +69,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           isSubmitting: false,
           failedNavigateToHome: true,
         ));
-
       }
     });
 
     on<ResetNavigationFlag>((event, emit) {
       emit(state.copyWith(navigateToHome: false));
     });
-
-
-
   }
   String? _validateEmail(String email) {
     if (email.isEmpty) {

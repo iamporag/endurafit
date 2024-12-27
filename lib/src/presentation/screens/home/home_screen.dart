@@ -1,12 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
 
 import '../../../utils/utils.dart';
 import '../../widgets/widgets.dart';
-
-
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -77,7 +74,7 @@ class DietNutritionArea extends StatelessWidget {
           child: Row(
             children: List.generate(
               5,
-                  (index) => Container(
+              (index) => Container(
                 margin: EdgeInsets.only(right: 10.0),
                 width: MediaQuery.of(context).size.width * 0.85,
                 height: MediaQuery.of(context).size.height * 0.30,
@@ -130,9 +127,9 @@ class DietNutritionArea extends StatelessWidget {
                                               .textTheme
                                               .labelLarge
                                               ?.copyWith(
-                                            color:
-                                            theme.colorScheme.onSurface,
-                                          ),
+                                                color:
+                                                    theme.colorScheme.onSurface,
+                                              ),
                                         ),
                                         Text(
                                           'Protin',
@@ -140,9 +137,9 @@ class DietNutritionArea extends StatelessWidget {
                                               .textTheme
                                               .labelSmall
                                               ?.copyWith(
-                                            color:
-                                            theme.colorScheme.onSurface,
-                                          ),
+                                                color:
+                                                    theme.colorScheme.onSurface,
+                                              ),
                                         ),
                                       ],
                                     ),
@@ -169,9 +166,9 @@ class DietNutritionArea extends StatelessWidget {
                                               .textTheme
                                               .labelLarge
                                               ?.copyWith(
-                                            color:
-                                            theme.colorScheme.onSurface,
-                                          ),
+                                                color:
+                                                    theme.colorScheme.onSurface,
+                                              ),
                                         ),
                                         Text(
                                           'Fat',
@@ -179,9 +176,9 @@ class DietNutritionArea extends StatelessWidget {
                                               .textTheme
                                               .labelSmall
                                               ?.copyWith(
-                                            color:
-                                            theme.colorScheme.onSurface,
-                                          ),
+                                                color:
+                                                    theme.colorScheme.onSurface,
+                                              ),
                                         ),
                                       ],
                                     ),
@@ -202,8 +199,8 @@ class DietNutritionArea extends StatelessWidget {
                                         .textTheme
                                         .titleLarge
                                         ?.copyWith(
-                                      color: theme.colorScheme.onSurface,
-                                    ),
+                                          color: theme.colorScheme.onSurface,
+                                        ),
                                   ),
                                   Row(
                                     children: [
@@ -222,9 +219,9 @@ class DietNutritionArea extends StatelessWidget {
                                                 .textTheme
                                                 .bodyMedium
                                                 ?.copyWith(
-                                              color:
-                                              theme.colorScheme.surface,
-                                            ),
+                                                  color:
+                                                      theme.colorScheme.surface,
+                                                ),
                                           ),
                                         ],
                                       ),
@@ -256,9 +253,9 @@ class DietNutritionArea extends StatelessWidget {
                                                 .textTheme
                                                 .bodyMedium
                                                 ?.copyWith(
-                                              color:
-                                              theme.colorScheme.surface,
-                                            ),
+                                                  color:
+                                                      theme.colorScheme.surface,
+                                                ),
                                           ),
                                         ],
                                       )
@@ -338,8 +335,8 @@ class WorkoutsArea extends StatelessWidget {
                                 .textTheme
                                 .labelMedium
                                 ?.copyWith(
-                              color: theme.colorScheme.surface,
-                            ),
+                                  color: theme.colorScheme.surface,
+                                ),
                           ),
                         ],
                       ),
@@ -361,8 +358,8 @@ class WorkoutsArea extends StatelessWidget {
                                 .textTheme
                                 .labelMedium
                                 ?.copyWith(
-                              color: theme.colorScheme.surface,
-                            ),
+                                  color: theme.colorScheme.surface,
+                                ),
                           ),
                         ],
                       )
@@ -381,8 +378,8 @@ class WorkoutsArea extends StatelessWidget {
                                 .textTheme
                                 .titleMedium
                                 ?.copyWith(
-                              color: theme.colorScheme.surface,
-                            ),
+                                  color: theme.colorScheme.surface,
+                                ),
                           ),
                           Row(
                             children: [
@@ -392,8 +389,8 @@ class WorkoutsArea extends StatelessWidget {
                                     .textTheme
                                     .labelMedium
                                     ?.copyWith(
-                                  color: theme.colorScheme.surface,
-                                ),
+                                      color: theme.colorScheme.surface,
+                                    ),
                               ),
                               SizedBox(
                                 width: 10,
@@ -407,14 +404,14 @@ class WorkoutsArea extends StatelessWidget {
                                   padding: const EdgeInsets.all(8.0),
                                   child: Center(
                                       child: Text(
-                                        'Intense',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .labelMedium
-                                            ?.copyWith(
+                                    'Intense',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .labelMedium
+                                        ?.copyWith(
                                           color: theme.colorScheme.surface,
                                         ),
-                                      )),
+                                  )),
                                 ),
                               )
                             ],
@@ -459,7 +456,7 @@ class FitnessMetricsArea extends StatelessWidget {
           child: Row(
             children: List.generate(
               5,
-                  (index) => Container(
+              (index) => Container(
                 margin: EdgeInsets.only(right: 20),
                 width: 180,
                 height: 220,
@@ -537,8 +534,8 @@ class TopArea extends StatelessWidget {
             color: Colors.black,
             gradient: LinearGradient(
               colors: [
-                Colors.blue,
-                Colors.amber,
+                Colors.black,
+                Colors.black45,
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -568,8 +565,8 @@ class TopArea extends StatelessWidget {
                   Text(
                     formatter,
                     style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                      color: theme.colorScheme.surface,
-                    ),
+                          color: theme.colorScheme.surface,
+                        ),
                   ),
                 ],
               ),
@@ -606,8 +603,8 @@ class TopArea extends StatelessWidget {
                                 .textTheme
                                 .labelLarge
                                 ?.copyWith(
-                              color: theme.colorScheme.surface,
-                            ),
+                                  color: theme.colorScheme.surface,
+                                ),
                           ),
                           Row(
                             children: [
@@ -623,8 +620,8 @@ class TopArea extends StatelessWidget {
                                         .textTheme
                                         .labelSmall
                                         ?.copyWith(
-                                      color: theme.colorScheme.surface,
-                                    ),
+                                          color: theme.colorScheme.surface,
+                                        ),
                                   ),
                                 ],
                               ),
@@ -643,8 +640,8 @@ class TopArea extends StatelessWidget {
                                         .textTheme
                                         .labelSmall
                                         ?.copyWith(
-                                      color: theme.colorScheme.surface,
-                                    ),
+                                          color: theme.colorScheme.surface,
+                                        ),
                                   ),
                                 ],
                               ),
@@ -657,7 +654,10 @@ class TopArea extends StatelessWidget {
                   SvgPicture.asset(
                     AssetsManager.appArrowRightIcon,
                     width: 35,
-                    color: theme.colorScheme.surface,
+                    colorFilter: ColorFilter.mode(
+                      Colors.white, // Replace with your desired color
+                      BlendMode.srcIn, // Ensures the color is applied properly
+                    ),
                   ),
                 ],
               )
