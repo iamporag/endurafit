@@ -452,7 +452,7 @@ class FitnessMetricsArea extends StatelessWidget {
         ),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          padding: EdgeInsets.only(left: 20, right: 20),
+          padding: EdgeInsets.only(left: 16, right: 16),
           child: Row(
             children: List.generate(
               5,
@@ -461,7 +461,14 @@ class FitnessMetricsArea extends StatelessWidget {
                 width: 180,
                 height: 220,
                 decoration: BoxDecoration(
-                  color: Colors.pink,
+                  gradient: LinearGradient(
+                    colors: [
+                      Color(0xFFF97316),
+                      Color(0xFFF97316).withValues(alpha: 0.8),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
                   borderRadius: BorderRadius.circular(45),
                 ),
                 child: Padding(
@@ -479,15 +486,19 @@ class FitnessMetricsArea extends StatelessWidget {
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold),
                           ),
-                          Icon(
-                            Icons.add,
-                            color: Colors.white,
+                          SvgPicture.asset(
+                            AssetsManager.healthPlusFillIcon,
+                            colorFilter: ColorFilter.mode(
+                              Colors.white,
+                              BlendMode.srcIn,
+                            ),
                           ),
                         ],
                       ),
-                      Icon(
-                        Icons.leaderboard_rounded,
-                        size: 100,
+                      Expanded(
+                        child: SvgPicture.asset(
+                          AssetsManager.barGraphImage,
+                        ),
                       ),
                       Align(
                         alignment: Alignment.centerLeft,
@@ -554,19 +565,34 @@ class TopArea extends StatelessWidget {
                 height: 50,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(
-                    Icons.calendar_month,
-                    color: Colors.white,
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    formatter,
-                    style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                  Row(
+                    children: [
+                      SvgPicture.asset(
+                        AssetsManager.calendarIcon,
+                        colorFilter: ColorFilter.mode(
+                          Colors.white,
+                          BlendMode.srcIn,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        formatter,
+                        style: Theme.of(context).textTheme.titleSmall?.copyWith(
                           color: theme.colorScheme.surface,
                         ),
+                      ),
+                    ],
+                  ),
+                  SvgPicture.asset(
+                    AssetsManager.notificationIcon,
+                    colorFilter: ColorFilter.mode(
+                      Colors.white,
+                      BlendMode.srcIn,
+                    ),
                   ),
                 ],
               ),
@@ -610,9 +636,12 @@ class TopArea extends StatelessWidget {
                             children: [
                               Row(
                                 children: [
-                                  Icon(
-                                    Icons.add,
-                                    color: Colors.white,
+                                  SvgPicture.asset(
+                                    AssetsManager.healthPlusFillIcon,
+                                    colorFilter: ColorFilter.mode(
+                                      Colors.amber,
+                                      BlendMode.srcIn,
+                                    ),
                                   ),
                                   Text(
                                     '88% Healthy',
@@ -630,9 +659,12 @@ class TopArea extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.white,
+                                  SvgPicture.asset(
+                                    AssetsManager.starFillIcon,
+                                    colorFilter: ColorFilter.mode(
+                                      Colors.blue,
+                                      BlendMode.srcIn,
+                                    ),
                                   ),
                                   Text(
                                     'Pro',
